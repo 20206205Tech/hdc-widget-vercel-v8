@@ -3,10 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MRAG Widget Demo</title>
+    <title>CASE 8 - body transform: translateZ(0) + filter + trang dài</title>
     <link rel="stylesheet" href="style.css" />
+<!-- CASE 8: body transform: translateZ(0) + filter + trang dài
+     Layout SPA thường gặp: transform/filter ở body, cuộn trang dài. Fixed bị lệch. -->
+<style>body{transform:translateZ(0);filter:grayscale(.2);height:3000px;position:relative}</style>
 </head>
 <body>
+<div id="__case" style="position:fixed;left:8px;top:8px;max-width:360px;z-index:2147483646;background:#111;color:#fff;font:12px/1.4 monospace;padding:6px 8px;border-radius:6px;letter-spacing:0;text-transform:none;writing-mode:horizontal-tb;direction:ltr;pointer-events:none;white-space:normal;text-indent:0;font-weight:400;font-style:normal;text-shadow:none">
+<b>CASE 8</b>: body transform: translateZ(0) + filter + trang dài<br><span id="__fs"></span></div>
+<script>(function(){var u=function(){var e=document.getElementById('__fs');if(e)e.textContent='html font-size='+getComputedStyle(document.documentElement).fontSize+' | w='+innerWidth+'px'};addEventListener('DOMContentLoaded',u);addEventListener('resize',u);u()})()</script>
+
     <header class="site-header">
         <div class="container header-inner">
             <span class="logo">Acme Travel</span>
